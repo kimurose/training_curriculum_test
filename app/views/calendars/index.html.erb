@@ -15,8 +15,8 @@
           <%= "#{daily_schedule[:month]}/#{daily_schedule[:date]}" %>
         </div>
         <ul class='content'>
-        <% if day[:plans].length != 0 %>
-          <% day[:plans].each do |plan| %>
+         <% if daily_schedule[:plans].present? %>
+           <% daily_schedule[:plans].each do |plan| %>
             <li class='plan-list'>・<%= plan %></li>
           <% end %>
         <% end %>
