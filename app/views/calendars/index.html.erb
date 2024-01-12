@@ -10,9 +10,10 @@
 <div>
   <div class='calendar'>
     <% @week_days.each do |day| %>
-      <div class='date'>
-        <%= "#{daily_schedule[:month]}/#{daily_schedule[:date]}" %>
-      </div>
+      <div class='item'>
+        <div class='date'>
+          <%= "#{daily_schedule[:month]}/#{daily_schedule[:date]}" %>
+        </div>
         <ul class='content'>
          <% if daily_schedule[:plans].present? %>
            <% daily_schedule[:plans].each do |plan| %>
@@ -20,6 +21,7 @@
           <% end %>
         <% end %>
         </ul>
+      </div>
     <% end %>
   </div>
 </div>
